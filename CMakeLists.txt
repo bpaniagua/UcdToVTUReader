@@ -4,8 +4,12 @@ cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
 project(UcdToVTU)
 
 find_package(VTK COMPONENTS
-  vtkIOGeometry
-  vtkIOXML
+vtkIOGeometry
+vtkIOXML
+vtkCommonCore
+vtkCommonDataModel
+vtkFiltersGeometry
+vtkFiltersSources
   QUIET)
 if (NOT VTK_FOUND)
   message("Skipping UcdToVTU: ${VTK_NOT_FOUND_MESSAGE}")
